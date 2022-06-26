@@ -76,8 +76,8 @@ Resources:
             UserData:
                 Fn::Base64: !Sub |
                     #!/bin/bash -xe
-                    yum update -y # good practice to update existing packages
-                    yum install -y httpd # install web server 
+                    yum update -y
+                    yum install -y httpd # install web server for linux
                     systemctl start httpd
                     systemctl enable httpd
                     echo "it works! Udagram, Udacity" > /var/www/html/index.html
